@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="inline center" style="text-align: center;">
+    <img class="img" src="../assets/netfilm.png">
+  </div>
+
+  <form (ngSubmit)="getFilms()" [formGroup]="findMovieForm" class="form-inline my-2 my-lg-0">
+    <input  formControlName="userInput" class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Search" >
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+  </form>
+
+<div class=inline>
+  <p *ngFor="let movie of movies">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{movie.Title}}</mat-card-title>
+          <mat-card-subtitle>{{movie.Year}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{movie.Poster}} alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Favori</button>
+        </mat-card-actions>
+      </mat-card>
+  </p>
+</div>
+
+
+<router-outlet></router-outlet>
