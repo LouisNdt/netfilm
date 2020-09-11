@@ -1,3 +1,4 @@
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { SearchServiceService } from './../../services/search.service';
 import { Component } from '@angular/core';
@@ -20,7 +21,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 export class AppComponent {
   title = 'NETFILM';
-  constructor(private unService : SearchServiceService) { }
+  nbResult: any;
+  dispTitle: boolean;
+  isResult:any;
+  constructor(private unService : SearchServiceService, private snackbar: MatSnackBar) {
+    this.dispTitle=false;
+   }
 
   movies: any;
   userFilm:any;
@@ -33,7 +39,17 @@ export class AppComponent {
 
 getFilms(){
   this.userFilm = this.findMovieForm.controls['userInput'].value;
-  this.unService.getFilms(this.userFilm).subscribe((result:any)=>{console.log(result); this.movies = result.Search;});
+  this.unService.getFilms(this.userFilm).subscribe((result:any)=>{console.log(result); this.movies = result.Search; this.isResult = result.Response; if (result.Response=="True")this.nbResult = result.Search.length;});
+  this.openSnackBar();
+}
+
+openSnackBar() {
+  if(this.isResult=="False"){
+    this.snackbar.open("Pas de film correspondant", "OK", {duration: 3000});
+  }
+  else{
+    this.snackbar.open(this.nbResult + " films", "OK", {duration: 3000});
+  }
 }
 
 }
