@@ -1,6 +1,6 @@
 .example-card {
   max-width: 150px;
-  background-color: lightblue;
+  background-color: #3498db;
 }
 
 .inline {
@@ -22,3 +22,103 @@ html{
 .img{
   max-width: 200px;
 }
+/* NAV BAR */
+nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 590px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #3498db;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #3498db;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #3498db;
+}
+/* Search bar */
+
+.form{
+  padding: 10px 0;
+  padding-right: 15px;
+  border: 3px solid #E35865;
+  
+}
+header.container-fluid{
+  margin: 0;
+  box-shadow: 0 0px 3px 3px rgba(0,0,0,.4);
+  height: 100vh;
+  min-height: 150px;
+}
+.container{
+  max-width: 720px;
+  margin: auto;
+  padding: 0 50px;
+}
+input{
+  padding:0;
+  border-radius: 0;
+  border: none;
+  font-size: 20px;
+  color: #bbb;
+  background:none;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  font-family: 'Arvo', sans-serif;
+  padding: 0;
+  line-height: 25px;
+}
+.glyphicon{
+  color: #E35865;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.glyphicon-search{
+  cursor: pointer;
+
+}
+
+
