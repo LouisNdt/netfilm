@@ -22,7 +22,7 @@ html{
 .img{
   max-width: 200px;
 }
-/* NAV BAR */
+/* NAV BAR ****************************/
 nav {
 	margin: 27px auto 0;
 
@@ -78,7 +78,7 @@ nav .start-blog, a:nth-child(3):hover~.animation {
 	left: 210px;
 	background-color: #3498db;
 }
-/* Search bar */
+/* Search bar *****************************************************/
 
 .form{
   padding: 10px 0;
@@ -110,16 +110,20 @@ input{
   padding: 0;
   line-height: 25px;
 }
-.glyphicon{
+button{
+  float: right;
+  width: 30%;
+  height: 30px;
+  background:rgba(0,0,0,0);
   color: #E35865;
-  font-size: 20px;
-  line-height: 25px;
-}
-
-.glyphicon-search{
+  font-size: 17px;
+  border: none;
   cursor: pointer;
-
 }
+button:hover{
+  background: #3498db;
+}
+
 
 .filmtitle{
   color: red;

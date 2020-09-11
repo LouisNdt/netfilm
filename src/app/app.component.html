@@ -1,25 +1,21 @@
 
 
 <!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav>
-  <a href="#">Acceuil</a>
-  <a href="#">Recherche</a>
-  <a href="#">Contact</a>
+  <a href="../index.html">Acceuil</a>
+  <a href="../index.html">Recherche</a>
+  <a href="../contact.html">Contact</a>
   <div class="animation start-home"></div>
 </nav>
+
 <div style="text-align:center">
-
- <!-- <form (ngSubmit)="getFilms()" [formGroup]="findMovieForm" class="form-inline my-2 my-lg-0">
-    <input  formControlName="userInput" class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Search" >
-  </form>-->
-
   <div class="container text-center" id="searchBox">
     <h1><img class="img" src="../assets/netfilm.png"></h1>
     <div class="form col-xs-12">
       <form (ngSubmit)="getFilms()" [formGroup]="findMovieForm" class="form-inline my-2 my-lg-0">
         <input class="form-inline my-2 my-lg-0" formControlName="userInput" id="searchBar" type="text" placeholder="Recherche" aria-label="Search"/>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-        <!-- <span class="glyphicon glyphicon-search col-xs-1" data-toggle="tooltip" title="Search"></span> -->
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
      </form>
       </div>
   </div>
